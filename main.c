@@ -1,1 +1,4 @@
-sd
+#include <stdio.h>
+int main(){
+  printf("HELLO.MY.FREIND");
+}
