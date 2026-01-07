@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define BLUE "\x1b[34m"
+#define BLUE "\x1b[36m"
 #define RES "\x1b[0m"
 #include <windows.h>
 
@@ -20,7 +20,11 @@ void make_gamep(int n){
   	printf("  ");
   	for(int j=0;j<n;j++){
   		if(i%2==0) printb("+---");
-  		else printb("|   ");
+  		else{
+  			if(i==1&&j==n/2) printb("|"), printf(" O ");
+  			else if(i==2*n-1&&j==n/2) printb("|"), printf(" X ");
+  				 else printb("|   ");
+		}
 	}
 	if(i%2==0) printb("+");
 	else printb("|");
